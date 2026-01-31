@@ -179,7 +179,13 @@ jobs:
             print("\nERROR: AZURE_AI_PROJECT_ENDPOINT is missing protocol. It must start with https://", file=sys.stderr)
             sys.exit(3)
           PY
-      
+    
+      - name: Show current Azure identity
+        shell: bash
+        run: |
+          az account show -o table
+          az ad sp show --id "$AZURE_CLIENT_ID" --query "{displayName:displayName, objectId:id, appId:appId}" -o table
+
       - name: Run evaluation against deployed app
         run: |
           # If the script hits input() it will otherwise hang CI.
