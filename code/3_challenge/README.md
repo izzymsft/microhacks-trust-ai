@@ -77,9 +77,9 @@ Go to Actions, click on ```Github Actions Evaluation Workflow``` and see the ini
 
 Get the App name from and pipeline config output you executed above - it shows something like this “Creating service principal az-dev-XXXXXXXXXXX (30XXXXXXXXXXXXXXXX)”
 
-🧩 Step 4 — Assign Azure permissions
-
 Go to Microsoft Entra ID —> Enterprise Applications —> Search using your app name —> Get the object ID
+
+🧩 Step 4 — Assign Azure permissions
 
 Go to Azure Portal —> Resource group —> Select Foundry Resource —> Assign the role ```Cognitive Services OpenAI Contributor``` —> Select user, group or Service principal —> Search using your app name or object ID —> Review and Assign
 
