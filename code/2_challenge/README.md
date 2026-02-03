@@ -28,11 +28,11 @@ In Challenge 2, participants take the role of a DevOps/AI engineer in charge of 
 
 Microsoft has developed Azure Review Checklists available to allow customers an automated way to validate that their infrastructure is aligned with the Secure Foundation Initiative and the Well Architected Framework (WAF).
 
-1. Download the [Azure Review Checklist](/docs/review_checklist.xlsm) from this repo to your desktop for review.  The spreadsheet is prebuilt to reduce setup time for the Microhack.  There is a repo that contains instruction on how to implement it for your Generative AI Application.  [Azure Review Checklist](https://github.com/Azure/review-checklists/blob/main/spreadsheet/README.md).  We suggest for this hack to use the existing spreadsheet but for production deployments leverage the checklist to audit your system.
+1. Download the [AI Landing Zone Checklist](/docs/ch2_tai_review_checklist.xlsx) from this repo to your desktop for review.  The spreadsheet is prebuilt to reduce setup time for the Microhack.  There is a repo that contains instruction on how to implement it for your Generative AI Application.  [Azure Review Checklist](https://github.com/Azure/review-checklists/blob/main/spreadsheet/README.md).  We suggest for this hack to use the existing spreadsheet but for production deployments leverage the checklist to audit your system.
 
-2. Review the checklist items and their status to see which ones are out of compliance.  The "Comments" column of the spreadsheet will fill in with the results of the Azure Graph Queries, and display resource IDs that are compliant or non-compliant with the recommendation.  Discuss the potential changes you would need to make but don't actually implement them.  This spreadsheet was built using a [private network](https://github.com/Azure-Samples/azure-search-openai-demo/blob/main/docs/deploy_private.md) but was not 100% compliant with Azure AI Landing Zones.
+2. Review the AI Landing Zone checklist items and their status to see which ones are Open, Fulfilled, Not Verified or Not required.  Go to the tab called, "Dashboard" and review the overall status by Design areas.  Review the list for familarity and discuss with team potential gaps.  This spreadsheet was built using a [private network](https://github.com/Azure-Samples/azure-search-openai-demo/blob/main/docs/deploy_private.md) but was not 100% compliant with Azure AI Landing Zones.
 
-      ![Alt text](/media/alz_checklist.png "ALZ Review Checklist")
+      ![Alt text](/media/AILZ%20Dashboard.png "ALZ Review Checklist")
 </br>
 
 WAF & Security Compliance are now complete and the infrastructure is ready for production.  We will need to run application testing to evaluate if the application is safe and high quality.
@@ -103,7 +103,7 @@ The AI Red Team Agent will be able to assess risk categories and attack strategi
 
 ## Success Criteria
 
-1.	WAF Compliance exceeds 70 to 80% (varies by intensity).  Review the spreadsheet and open the dashboard tab.  Find the Review status and see if the number of open items is less than 30%.  If this is not the case, you’ll need to review the checklist until you mitigate enough open issues that allows you to reach this threshold.
+1.	Review the checklist of items and see which ones are "Open" and "Not Verified".  Peform a gap analysis and determine what needs to be done to ensure compliance.  This exercise is to help you gain familiarity with the Azure AI Landing Zones for future reference.  The exercise is not meant for you to complete/resolve these issues in your Azure Tenant.  For reference, we leveraged this deployment [private network](https://github.com/Azure-Samples/azure-search-openai-demo/blob/main/docs/deploy_private.md) as our baseline if you like to understand the final deployment.
 
 1. Automated Quality evaluations are more than 90% for each metric and the safety scores are at 100% for all metrics.  Review the list of quality metrics; groundedness and relevance for quality while safety metrics are hate, sexual, violence and self-harm.  Review the summary score of these four metrics and ensure it is at 100%.
 
